@@ -10,7 +10,6 @@ import pickle
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-import seaborn as sns
 from streamlit_option_menu import option_menu
 
 
@@ -82,13 +81,6 @@ if selected == "Penjelasan Dataset":
     st.write(
         "Visualisasikan beberapa atribut dataset untuk mendapatkan pemahaman yang lebih baik."
     )
-
-    # Contoh visualisasi (Anda dapat menambahkan visualisasi sesuai kebutuhan)
-    fig, ax = plt.subplots(figsize=(10, 6))
-    sns.histplot(data=parkinsons_data, x="MDVP:Fo(Hz)", kde=True, ax=ax)
-    plt.xlabel("MDVP:Fo(Hz)")
-    plt.title("Distribusi MDVP:Fo(Hz)")
-    st.pyplot(fig)
 
     # Tambahkan tautan atau referensi dataset jika ada
     st.header("Referensi Dataset:")
